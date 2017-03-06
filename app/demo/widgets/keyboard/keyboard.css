@@ -1,0 +1,71 @@
+/* Keyboard
+*******************************/
+
+.w-keyboard-item {
+	font-size: 27px;
+	font-weight: bold;
+	line-height: 55px;
+	color: #fff;
+	text-align: center;
+	border: 2px solid #787878;
+	border-radius: 12px;
+}
+
+.w-keyboard-item._yellow {
+	border-color: #e4d02e;
+}
+
+.w-keyboard-item._red {
+	border-color: #f00;
+}
+
+.w-keyboard-item._green {
+	border-color: #098700;
+}
+
+.w-keyboard-item._blue {
+	border-color: #0096ff;
+}
+
+.w-keyboard-item._backspace {
+	background: url(keyboard-item-backspace.png) 50% 50% no-repeat;
+}
+
+.w-keyboard-item._caps,
+.w-keyboard-item._switch-keyboard {
+	background-color: #747474;
+}
+
+.w-keyboard-item._caps {
+	background-image: url(keyboard-item-caps.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.w-keyboard-item._switch-keyboard {
+	font-size: 18px;
+}
+
+.w-keyboard-item._active {
+	background-color: #fba015;
+	border-color: #fba015;
+}
+
+.w-keyboard {}
+	.w-keyboard__line {
+		text-align: left;
+	}
+	.w-keyboard__center {
+		vertical-align: top;
+		display: inline-block;
+	}
+	.w-keyboard .w-keyboard-item {
+		width: 57px;
+		height: 49px;
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 4px;
+	}
+	.w-keyboard .w-keyboard-item:last-child {
+		margin-right: 0;
+	}

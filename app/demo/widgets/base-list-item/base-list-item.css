@@ -1,0 +1,19 @@
+/* BaseListItem widget
+*******************************/
+
+.w-base-list-item {}
+	.w-base-list-item__wrap {
+		width: 135px;
+		height: 115px;
+		margin-left: 20px;
+		border: 3px solid #8a8a8a;
+		border-radius: 5px;
+	}
+	.w-base-list-item__title {
+		width: 100%;
+		font-size: 27px;
+		font-weight: bold;
+		line-height: 1;
+		text-align: center;
+		margin-top: 45px;
+	}

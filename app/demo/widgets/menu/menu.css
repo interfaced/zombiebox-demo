@@ -1,0 +1,48 @@
+/* Menu widget
+*******************************/
+
+.w-menu {
+	width: 328px;
+	height: 100%;
+	background-color: #010101;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 2;
+}
+	.w-menu__logo {
+		width: 262px;
+		height: 104px;
+		background: url(menu-logo.png) center no-repeat;
+		margin: 23px 34px 0;
+	}
+	.w-menu__wrap {
+		margin-top: 10px;
+	}
+	.w-menu .w-scroll-bar._is-vertical {
+		position: absolute;
+		left: 305px;
+		top: 30px;
+		width: 4px !important;
+		height: 660px !important;
+		background-color: #666 !important;
+	}
+	.w-menu .w-scroll-bar__thumb {
+		width: 4px !important;
+		background: #fff !important;
+	}
+	.w-menu .w-menu-item {
+		position: relative;
+		z-index: 101;
+		margin-bottom: 15px;
+	}
+	.w-menu .w-menu-item._sub-item {
+		margin-bottom: 0;
+	}
+	.w-menu .w-menu-item._sub-item._first-child {
+		padding-top: 5px;
+		margin-top: -15px;
+	}
+	.w-menu .w-menu-item._sub-item._last-child {
+		padding-bottom: 15px;
+	}

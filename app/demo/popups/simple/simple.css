@@ -1,0 +1,73 @@
+/* Simple popup
+*******************************/
+
+.p-simple {
+	background: rgba(0, 0, 0, .6);
+}
+	.p-simple .zb-center__container {
+		width: 349px;
+		height: 257px;
+		color: #222;
+		margin-top: 4px;
+		margin-left: -7px;
+		border-radius: 9px;
+	}
+	.p-simple__title {
+		font-size: 27px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 41px;
+	}
+	.p-simple__message {
+		font-size: 18px;
+		text-align: center;
+		margin-top: 23px;
+	}
+	.p-simple__buttons {
+		font-size: 0;
+		text-align: center;
+		margin-top: 28px;
+	}
+	.p-simple .w-button {
+		width: 142px;
+		font-size: 22px;
+		font-weight: bold;
+		color: #222;
+		padding: 15px 0 11px;
+	}
+	.p-simple .w-button._active {
+		color: #fff;
+	}
+
+.p-simple._confirm {}
+	.p-simple._confirm .zb-center__container {
+		width: 420px;
+		margin-left: -2px;
+	}
+	.p-simple._confirm .w-button:first-child {
+		position: relative;
+		left: 3px;
+		margin-right: 26px;
+	}
+
+.p-simple._select {}
+	.p-simple._select .zb-center__container {
+		width: 608px;
+		height: 314px;
+		margin-top: -1px;
+		margin-left: -2px;
+	}
+	.p-simple._select .p-simple__buttons {
+		width: 560px;
+		margin-top: 40px;
+		margin-left: 25px;
+	}
+	.p-simple._select .w-button {
+		margin-left: 32px;
+	}
+	.p-simple._select .w-button:nth-of-type(n+4) {
+		margin-top: 32px;
+	}
+	.p-simple._select .w-button:nth-of-type(3n+1) {
+		margin-left: 0;
+	}

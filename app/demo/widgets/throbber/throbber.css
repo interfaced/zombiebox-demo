@@ -1,0 +1,8 @@
+/* Throbber widget
+*******************************/
+
+.w-throbber {
+	width: 58px;
+	height: 58px;
+	background-image: url(throbber.png);
+}

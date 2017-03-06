@@ -1,0 +1,46 @@
+/* NativeInput scene
+*******************************/
+
+.s-native-input-warn {}
+	.s-native-input-warn__title {
+		font-size: 27px;
+		font-weight: bold;
+		color: #f00;
+	}
+	.s-native-input-warn__message {
+		font-size: 18px;
+		margin-top: 14px;
+	}
+
+.s-native-input {}
+	.s-native-input__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-native-input__input-wrapper {
+		width: 786px;
+		position: relative;
+		margin: 17px 80px 0;
+		border: 3px solid transparent;
+		border-radius: 10px;
+	}
+	.s-native-input__input {
+		width: 100%;
+		background-color: #fff;
+		font-size: 20px;
+		color: #222;
+		text-indent: 17px;
+		padding: 14px 0;
+		border-width: 0;
+		border-radius: 6px;
+		outline: none;
+	}
+	.s-native-input__input-wrapper._active {
+		border-color: #fba015;
+	}
+	.s-native-input .s-native-input-warn {
+		display: none;
+		margin-top: 41px;
+		margin-left: 83px;
+	}

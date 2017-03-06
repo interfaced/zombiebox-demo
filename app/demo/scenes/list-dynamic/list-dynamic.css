@@ -1,0 +1,10 @@
+/* ListDynamic scene
+*******************************/
+
+.s-list-dynamic {}
+	.s-list-dynamic .s-list-static__title {
+		width: 610px;
+	}
+	.s-list-dynamic .s-list-static__amount {
+		display: none;
+	}

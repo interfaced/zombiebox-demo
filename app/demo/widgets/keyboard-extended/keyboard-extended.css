@@ -1,0 +1,124 @@
+/* KeyboardExtended widget
+*******************************/
+
+.w-keyboard-extended-item {
+	font-size: 27px;
+	font-weight: bold;
+	line-height: 55px;
+	color: #fff;
+	text-align: center;
+	border: 2px solid #787878;
+	border-radius: 12px;
+}
+
+.w-keyboard-extended-item._yellow {
+	border-color: #e4d02e;
+}
+
+.w-keyboard-extended-item._red {
+	border-color: #f00;
+}
+
+.w-keyboard-extended-item._green {
+	border-color: #098700;
+}
+
+.w-keyboard-extended-item._blue {
+	border-color: #0096ff;
+}
+
+.w-keyboard-extended-item._arrow {
+	position: relative;
+}
+	.w-keyboard-extended-item._arrow:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -11px;
+		border: 11px solid transparent;
+	}
+
+.w-keyboard-extended-item._arrow._left {}
+	.w-keyboard-extended-item._arrow._left:before {
+		margin-left: -22px;
+		border-right: 18px solid #fff;
+	}
+
+.w-keyboard-extended-item._arrow._right {}
+	.w-keyboard-extended-item._arrow._right:before {
+		margin-left: -7px;
+		border-left: 18px solid #fff;
+	}
+
+.w-keyboard-extended-item._backspace {
+	background: url(keyboard-item-extended-backspace.png) 50% 50% no-repeat;
+}
+
+.w-keyboard-extended-item._caps,
+.w-keyboard-extended-item._characters,
+.w-keyboard-extended-item._symbols,
+.w-keyboard-extended-item._symbols-special {
+	background-color: #747474;
+}
+
+.w-keyboard-extended-item._switch-lang {
+	background: url(keyboard-item-extended-switch-lang.png) center no-repeat;
+}
+
+.w-keyboard-extended-item._caps {
+	background-image: url(keyboard-item-extended-caps.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.w-keyboard-extended-item._whitespace,
+.w-keyboard-extended-item._symbols,
+.w-keyboard-extended-item._symbols-special,
+.w-keyboard-extended-item._characters,
+.w-keyboard-extended-item._enter {
+	font-size: 18px;
+	line-height: 52px;
+	text-transform: none;
+}
+
+.w-keyboard-extended-item._active {
+	background-color: #fba015;
+	border-color: #fba015;
+}
+
+.w-keyboard-extended {}
+	.w-keyboard-extended__layout._russian .w-keyboard-extended-item._whitespace {
+		width: 387px;
+	}
+	.w-keyboard-extended__layout._symbols-common .w-keyboard-extended__line:nth-child(3),
+	.w-keyboard-extended__layout._symbols-special .w-keyboard-extended__line:nth-child(3) {
+		margin-left: 66px;
+	}
+	.w-keyboard-extended .w-keyboard-extended__line {
+		text-align: left;
+	}
+	.w-keyboard-extended .w-keyboard-extended__center {
+		vertical-align: top;
+		display: inline-block;
+	}
+	.w-keyboard-extended .w-keyboard-extended-item {
+		width: 57px;
+		height: 49px;
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 4px;
+	}
+	.w-keyboard-extended .w-keyboard-extended-item._whitespace,
+	.w-keyboard-extended .w-keyboard-extended-item._whitespace,
+	.w-keyboard-extended .w-keyboard-extended-item._whitespace {
+		width: 255px;
+	}
+	.w-keyboard-extended .w-keyboard-extended-item:last-child {
+		margin-right: 0;
+	}
+
+.w-keyboard-extended._caps {}
+	.w-keyboard-extended._caps {
+		text-transform: uppercase;
+	}

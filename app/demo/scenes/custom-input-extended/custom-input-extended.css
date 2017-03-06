@@ -1,0 +1,14 @@
+/* CustomInputExtended scene
+*******************************/
+
+.s-custom-input._extended {}
+	.s-custom-input._extended .w-keyboard-extended {
+		width: 787px;
+		margin-top: 26px;
+		margin-left: 83px;
+	}
+	.s-custom-input._extended .w-keyboard-extended__layout._english,
+	.s-custom-input._extended .w-keyboard-extended__layout._symbols-common,
+	.s-custom-input._extended .w-keyboard-extended__layout._symbols-special {
+		margin-left: 66px;
+	}

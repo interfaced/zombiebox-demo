@@ -1,0 +1,40 @@
+/* CustomInput scene
+*******************************/
+
+.s-custom-input {}
+	.s-custom-input__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-custom-input__input-wrapper {
+		width: 786px;
+		margin: 17px 80px 0;
+		border: 3px solid transparent;
+		border-radius: 10px;
+	}
+	.s-custom-input__input {
+		background-color: #fff;
+		font-size: 20px;
+		color: #222;
+		padding: 14px 0 13px;
+		outline: none;
+		border-radius: 6px;
+	}
+	.s-custom-input__input._not-changed {
+		color: #8c8e91;
+	}
+	.s-custom-input__input .w-zbui-div-input__input {
+		padding-left: 17px;
+	}
+	.s-custom-input__input-wrapper._active {
+		border-color: #fba015;
+	}
+	.s-custom-input .w-keyboard {
+		width: 787px;
+		margin-top: 26px;
+		margin-left: 83px;
+	}
+	.s-custom-input .w-keyboard__layout._english .w-keyboard__line:last-child {
+		text-align: center;
+	}

@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'MyriadPro';
+	src: url(fonts/MyriadProRegular/MyriadProRegular.eot);
+	src: url(fonts/MyriadProRegular/MyriadProRegular.eot?#iefix) format('embedded-opentype'),
+	url(fonts/MyriadProRegular/MyriadProRegular.woff) format('woff'),
+	url(fonts/MyriadProRegular/MyriadProRegular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url(fonts/MyriadProBold/MyriadProBold.eot);
+	src: url(fonts/MyriadProBold/MyriadProBold.eot?#iefix)format('embedded-opentype'),
+	url(fonts/MyriadProBold/MyriadProBold.woff) format('woff'),
+	url(fonts/MyriadProBold/MyriadProBold.ttf) format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+.zb-body {
+	font-family: 'MyriadPro';
+	font-size: 16px;
+}
+	.zb-body.pc .zb-body__pc-help {
+		width: 514px;
+		height: 199px;
+		background: url(help.png) center no-repeat;
+		position: absolute;
+		bottom: -219px;
+		left: 383px;
+		z-index: 10;
+	}
+
+.zb-layer-container {
+	background-color: #222;
+}
+
+.a-throbber {
+	background-color: rgba(0, 0, 0, .6);
+	display: none;
+	z-index: 1000;
+}
+	.a-throbber .w-throbber {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -29px 0 0 -29px;
+	}
+
+body {}
+	body #deviceObjDiv,
+	body #voiceObjDiv {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+	}

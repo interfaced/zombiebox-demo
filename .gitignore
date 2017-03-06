@@ -1,0 +1,6 @@
+\.idea
+\.DS_Store
+\.code-cache/*
+dist/*
+node_modules
+web/dev.js

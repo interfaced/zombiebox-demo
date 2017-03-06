@@ -1,0 +1,55 @@
+/* PlayerProgress widget
+*******************************/
+
+.w-player-progress {
+	position: relative;
+}
+	.w-player-progress__time,
+	.w-player-progress__duration {
+		height: 1em;
+		font-size: 18px;
+		line-height: 1.1;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		margin-top: -9px;
+	}
+	.w-player-progress__time {
+		left: -85px;
+	}
+	.w-player-progress__duration {
+		right: -85px;
+	}
+	.w-player-progress__bar {
+		height: 100%;
+		background-color: rgba(255, 255, 255, .2);
+		position: relative;
+		border-radius: 5px;
+	}
+	.w-player-progress__progress {
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 5px;
+	}
+		.w-player-progress__progress:after {
+			width: 16px;
+			height: 16px;
+			background-color: #fff;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-top: -8px;
+			margin-right: -8px;
+			border-radius: 10px;
+		}
+
+.w-player-progress._disabled {}
+	.w-player-progress._disabled .w-player-progress__progress,
+	.w-player-progress._disabled .w-player-progress__progress:after {
+		background-color: #b2b2b2;
+	}

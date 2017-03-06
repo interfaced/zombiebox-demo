@@ -1,0 +1,60 @@
+/* Navigation scene
+*******************************/
+
+.s-navigation-scheme {
+	position: relative;
+}
+	.s-navigation-scheme__box {
+		width: 105px;
+		height: 85px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 3px solid #8a8a8a;
+		border-radius: 3px;
+	}
+	.s-navigation-scheme__box._width-2 {
+		width: 274px;
+	}
+	.s-navigation-scheme__box._width-3 {
+		width: 440px;
+	}
+	.s-navigation-scheme__box._height-2 {
+		height: 225px;
+	}
+	.s-navigation-scheme__box._top-2 {
+		top: 139px;
+	}
+	.s-navigation-scheme__box._top-3 {
+		top: 279px;
+	}
+	.s-navigation-scheme__box._top-4 {
+		top: 419px;
+	}
+	.s-navigation-scheme__box._left-2 {
+		left: 170px;
+	}
+	.s-navigation-scheme__box._left-3 {
+		left: 338px;
+	}
+	.s-navigation-scheme__box._left-4 {
+		left: 506px;
+	}
+	.s-navigation-scheme__box._left-5 {
+		left: 675px;
+	}
+	.s-navigation-scheme__box._active{
+		background-color: #fba015;
+		border-color: #fba015;
+	}
+
+.s-navigation {}
+	.s-navigation__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-navigation .s-navigation-scheme {
+		margin-top: 20px;
+		margin-left: 83px;
+	}

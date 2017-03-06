@@ -1,0 +1,55 @@
+/* ScrollText scene
+*******************************/
+
+.s-scroll-text {
+	font-size: 18px;
+}
+	.s-scroll-text__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-scroll-text__wrap {
+		width: 740px;
+		height: 465px;
+		overflow: hidden;
+		position: absolute;
+		padding-right: 46px;
+		margin-top: 13px;
+		margin-left: 83px;
+	}
+	.s-scroll-text__shadow {
+		height: 100px;
+		background-image: linear-gradient(to top, #222 0%, transparent 100%);
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.s-scroll-text__slider {
+		position: relative;
+	}
+	.s-scroll-text__text {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.s-scroll-text__para {
+		margin-bottom: 25px;
+	}
+	.s-scroll-text .w-scroll-bar._is-vertical {
+		width: 3px;
+		background-color: #787878;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.s-scroll-text .w-scroll-bar__thumb {
+		width: 3px;
+		background-color: #fff;
+	}
+	.s-scroll-text .s-scroll-text__wrap._active .w-scroll-bar .w-scroll-bar__thumb {
+		width: 3px;
+		background-color: #fba015;
+	}

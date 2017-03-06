@@ -1,0 +1,14 @@
+/* Button widget
+*******************************/
+
+.w-button {
+	text-align: center;
+	display: inline-block;
+	border: 3px solid #d0d0d0;
+	border-radius: 5px;
+}
+
+.w-button._active {
+	background-color: #fba015;
+	border-color: #fba015;
+}

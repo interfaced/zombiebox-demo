@@ -1,0 +1,155 @@
+{{$ demo.widgets.templates.keyboardExtended.keyboardExtended }}
+
+<div class="w-keyboard-extended">
+	<!--ABC english keyboard-->
+	<div class="w-keyboard-extended__layout _english zb-clear" data-component="{{% demo.widgets.KeyboardExtendedLayout, {type: demo.widgets.KeyboardExtended.Types.ABC, lang: demo.widgets.KeyboardExtended.Lang.EN}, layoutAbcEn }}">
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "q w e r t y u i o p".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcEn[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "a s d f g h j k l".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcEn[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _caps" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.CAPS}}"></div>
+				{{ "z x c v b n m".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcEn[]}}">{{=sym}}</div>
+				{{ }); }}
+				<div class="w-keyboard-extended-item _arrow _left" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LEFT}}"></div>
+				<div class="w-keyboard-extended-item _arrow _right" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.RIGHT}}"></div>
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _symbols" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_NUM}}">?123</div>
+				<div class="w-keyboard-extended-item _switch-lang _green" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LANG_RU}}"></div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcEn[]}}">,</div>
+				<div class="w-keyboard-extended-item _whitespace _yellow" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.SPACE}}">Space</div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcEn[]}}">.</div>
+				<div class="w-keyboard-extended-item _backspace _blue" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.BACKSPACE}}">.</div>
+				<div class="w-keyboard-extended-item _enter _red" data-export-id="{{@itemsAbcEn[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.ENTER}}">Enter</div>
+			</div>
+		</div>
+	</div>
+
+	<!--ABC russian keyboard-->
+	<div class="w-keyboard-extended__layout _russian zb-clear" data-component="{{% demo.widgets.KeyboardExtendedLayout, {type: demo.widgets.KeyboardExtended.Types.ABC, lang: demo.widgets.KeyboardExtended.Lang.RU}, layoutAbcRu }}">
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "й ц у к е н г ш щ з х ъ".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcRu[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "ф ы в а п р о л д ж э ё".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcRu[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _caps" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.CAPS}}"></div>
+				{{ "я ч с м и т ь б ю".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcRu[]}}">{{=sym}}</div>
+				{{ }); }}
+				<div class="w-keyboard-extended-item _arrow _left" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LEFT}}"></div>
+				<div class="w-keyboard-extended-item _arrow _right" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.RIGHT}}"></div>
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _symbols" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_NUM}}">?123</div>
+				<div class="w-keyboard-extended-item _switch-lang _green" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LANG_EN}}"></div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcRu[]}}">,</div>
+				<div class="w-keyboard-extended-item _whitespace _yellow" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.SPACE}}">Пробел</div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsAbcRu[]}}">.</div>
+				<div class="w-keyboard-extended-item _backspace _blue" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.BACKSPACE}}">.</div>
+				<div class="w-keyboard-extended-item _enter _red" data-export-id="{{@itemsAbcRu[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.ENTER}}">Ввод</div>
+			</div>
+		</div>
+	</div>
+
+	<!--NUM keyboard-->
+	<div class="w-keyboard-extended__layout _symbols-common zb-clear" data-component="{{% demo.widgets.KeyboardExtendedLayout, {type: demo.widgets.KeyboardExtended.Types.NUM}, layoutSymbolsCommon }}">
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "1 2 3 4 5 6 7 8 9 0".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsCommon[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "@ # $ % & * - + ( )".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsCommon[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _symbols-special" data-export-id="{{@itemsSymbolsCommon}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_SYMBOL}}">=\<</div>
+				{{ ['!', '"', '`', ':', ';', '/', '?'].forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsCommon[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _characters" data-keyboard-name="{{=demo.widgets.KeyboardExtended.Types.ABC}}" data-export-id="{{@itemsSymbolsCommon[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_ABC}}">АБВ</div>
+				<div class="w-keyboard-extended-item _switch-lang _green" data-export-id="{{@itemsSymbolsCommon[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LANG}}"></div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsCommon[]}}">,</div>
+				<div class="w-keyboard-extended-item _whitespace _yellow" data-export-id="{{@itemsSymbolsCommon[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.SPACE}}">Пробел</div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsCommon[]}}">.</div>
+				<div class="w-keyboard-extended-item _backspace _blue" data-export-id="{{@itemsSymbolsCommon[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.BACKSPACE}}">.</div>
+				<div class="w-keyboard-extended-item _enter _red" data-export-id="{{@itemsSymbolsCommon[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.ENTER}}">Ввод</div>
+			</div>
+		</div>
+	</div>
+
+	<!--SYMBOL keyboard-->
+	<div class="w-keyboard-extended__layout _symbols-special" data-component="{{% demo.widgets.KeyboardExtendedLayout, {type: demo.widgets.KeyboardExtended.Types.SYMBOLS}, layoutSymbolsSpecial }}">
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "~ ` | &bull; &radic; &pi; &divide; &times; { }".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsSpecial[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				{{ "&#8677; &pound; &cent; &euro; &deg; ^ - = [ ]".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsSpecial[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended-item _symbols" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_NUM}}">?123</div>
+			<div class="w-keyboard-extended__center">
+				{{ "&trade; &copy; &reg; &para; \\ < >".split(" ").forEach(function(sym) { }}
+					<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsSpecial[]}}">{{=sym}}</div>
+				{{ }); }}
+			</div>
+		</div>
+		<div class="w-keyboard-extended__line">
+			<div class="w-keyboard-extended__center">
+				<div class="w-keyboard-extended-item _characters" data-keyboard-name="{{=demo.widgets.KeyboardExtended.Types.ABC}}" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.TYPE_ABC}}">АБВ</div>
+				<div class="w-keyboard-extended-item _switch-lang _green" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.LANG}}"></div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsSpecial[]}}">,</div>
+				<div class="w-keyboard-extended-item _whitespace _yellow" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.SPACE}}">Пробел</div>
+				<div class="w-keyboard-extended-item" data-export-id="{{@itemsSymbolsSpecial[]}}">.</div>
+				<div class="w-keyboard-extended-item _backspace _blue" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.BACKSPACE}}">.</div>
+				<div class="w-keyboard-extended-item _enter _red" data-export-id="{{@itemsSymbolsSpecial[]}}" data-keyboard-action="{{=demo.widgets.KeyboardExtended.Actions.ENTER}}">Ввод</div>
+			</div>
+		</div>
+	</div>
+</div>

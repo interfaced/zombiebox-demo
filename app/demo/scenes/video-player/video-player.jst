@@ -1,0 +1,16 @@
+{{$ demo.scenes.templates.videoPlayer.videoPlayer }}
+
+<div class="s-video-player__title">Videoplayer</div>
+
+<div class="s-video-player__frame"></div>
+<div class="s-video-player__overlay"></div>
+
+<div class="s-video-player-control" data-export-id="{{@playerControls}}">
+	<div class="s-video-player-control__wrap">
+		<div class="s-video-player-control__item _rew" data-component="{{% zb.ui.Button, {}, rew }}"></div>
+		<div class="s-video-player-control__item _pause" data-component="{{% zb.ui.PlayerPlayPause, {}, playPause }}"></div>
+		<div class="s-video-player-control__item _ff" data-component="{{% zb.ui.Button, {}, ff }}"></div>
+		<div class="s-video-player-control__item _full-screen" data-component="{{% zb.ui.Button, {}, fullscreen }}"></div>
+		{{% demo.widgets.PlayerProgress, {}, playerProgress }}
+	</div>
+</div>
