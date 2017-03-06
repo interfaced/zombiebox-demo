@@ -1,4 +1,4 @@
-ebox demo application
+Zombiebox demo application
 =========
 
 Installation
