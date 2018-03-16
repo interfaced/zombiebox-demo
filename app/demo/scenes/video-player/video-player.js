@@ -81,9 +81,8 @@ demo.scenes.VideoPlayer = class extends demo.scenes.AbstractBase {
 
 		this._disableControls();
 
-		if (app.isDeviceDune()) {
-			const device = /** @type {zb.device.platforms.dune.Device} */(app.device);
-			device.setChromakey('#000001');
+		if (app.device.hasOSDChromaKeyFeature() && !app.device.hasOSDAlphaBlendingFeature()) {
+			app.device.setOSDChromaKey('#000001');
 		}
 
 		const url = this._urls[this._playingIndex];
@@ -95,9 +94,8 @@ demo.scenes.VideoPlayer = class extends demo.scenes.AbstractBase {
 	 * @override
 	 */
 	beforeDOMHide() {
-		if (app.isDeviceDune()) {
-			const device = /** @type {zb.device.platforms.dune.Device} */(app.device);
-			device.removeChromakey();
+		if (app.device.hasOSDChromaKeyFeature() && !app.device.hasOSDAlphaBlendingFeature()) {
+			app.device.removeOSDChromaKey();
 		}
 		super.beforeDOMHide();
 	}
@@ -414,11 +412,12 @@ demo.scenes.VideoPlayer = class extends demo.scenes.AbstractBase {
 
 
 	/**
+	 * @param {string} eventName
 	 * @param {string} errorMessage
 	 * @private
 	 */
-	_onError(errorMessage) {
-		/* empty function */
+	_onError(eventName, errorMessage) {
+		zb.console.error('Video error:' + errorMessage);
 	}
 
 

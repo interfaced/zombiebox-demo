@@ -4,7 +4,7 @@ goog.require('demo.widgets.Throbber');
 goog.require('zb.console');
 goog.require('zb.console.Level');
 goog.require('zb.device.input.Keys');
-goog.require('zb.device.platforms.mag250.Device');
+goog.require('zb.device.platforms.mag.Device');
 goog.require('zb.device.platforms.samsung.Device');
 goog.require('zb.device.platforms.webos.Device');
 goog.require('zb.ext.pixelPerfect.Controller');
@@ -127,8 +127,8 @@ demo.Application = class extends demo.BaseApplication {
 		if (app.isDeviceSamsung()) {
 			const samsungDevice = /** @type {zb.device.platforms.samsung.Device} */(this.device);
 			samsungDevice.getPluginObject()['registIMEKey']();
-		} else if (app.isDeviceMag250()) {
-			const magDevice = /** @type {zb.device.platforms.mag250.Device} */(this.device);
+		} else if (app.isDeviceMag()) {
+			const magDevice = /** @type {zb.device.platforms.mag.Device} */(this.device);
 			// eslint-disable-next-line new-cap
 			magDevice.getPluginObject().EnableVKButton(false);
 		}
