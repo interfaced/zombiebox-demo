@@ -2,7 +2,7 @@ goog.provide('demo.scenes.NativeInput');
 goog.require('demo.scenes.AbstractBase');
 goog.require('demo.scenes.templates.nativeInput.NativeInputOut');
 goog.require('demo.scenes.templates.nativeInput.nativeInput');
-goog.require('zb.device.platforms.mag250.Device');
+goog.require('zb.device.platforms.mag.Device');
 goog.require('zb.device.platforms.tvip.Device');
 goog.require('zb.html');
 
@@ -21,7 +21,7 @@ demo.scenes.NativeInput = class extends demo.scenes.AbstractBase {
 		this._exported;
 
 		/**
-		 * @type {?MAG250STB}
+		 * @type {?MAGgSTB}
 		 * @protected
 		 */
 		this._pluginMAG250 = null;
@@ -61,8 +61,8 @@ demo.scenes.NativeInput = class extends demo.scenes.AbstractBase {
 			window['lgKb']['onKeyboardHide'] = this._onKeyboardHide.bind(this);
 		} else if (app.isDeviceSamsung() && this._ime === null) {
 			this._ime = new window['IMEShell']('nativeInput', this._imeInitText, this);
-		} else if (app.isDeviceMag250()) {
-			const device = /** @type {zb.device.platforms.mag250.Device} */(app.device);
+		} else if (app.isDeviceMag()) {
+			const device = /** @type {zb.device.platforms.mag.Device} */(app.device);
 			this._pluginMAG250 = device.getPluginObject();
 		}
 
@@ -183,7 +183,7 @@ demo.scenes.NativeInput = class extends demo.scenes.AbstractBase {
 		} else if (app.isDeviceTvip()) {
 			const device = /** @type {zb.device.platforms.tvip.Device} */(app.device);
 			device._tvipStb.showVirtualKeyboard(true);
-		} else if (app.isDeviceMag250()) {
+		} else if (app.isDeviceMag()) {
 			// eslint-disable-next-line new-cap
 			this._pluginMAG250.ShowVirtualKeyboard();
 		}
@@ -208,10 +208,16 @@ demo.scenes.NativeInput = class extends demo.scenes.AbstractBase {
 		}
 
 		if (app.isDeviceTizen() || app.isDeviceSamsung()) {
+			// TODO подумать как избавиться от setTimeout
+			// костыль, так как у samsung-ORSAY свой обработчик нажатия, в итоге enter обрабатывается одновременно
+			// и сценой и virtual клавиатурой. Особенность ORSAY -> при скрытии клавиатуры необходимо убрать фокус с
+			// инпут элемента, в итоге нажатие enter обрабатывается на виджете сцены на который уходит фокус с инпута,
+			// поэтому снимаем блокировку обработки нажатия с задержкой. Если есть мысли как сделать лучше,
+			// готов обсудить
 			setTimeout(() => {
 				this._virtualKeyboardIsShown = false;
 			}, 300);
-		} else if (app.isDeviceMag250()) {
+		} else if (app.isDeviceMag()) {
 			// eslint-disable-next-line new-cap
 			this._pluginMAG250.HideVirtualKeyboard();
 		}
