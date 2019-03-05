@@ -1,17 +1,19 @@
+const exec = require('child_process').exec;
+
 /**
  * @param {function()} callback
  * @param {{
- *      app: ZBApplication,
- *      buildDir: string,
- *      platformName: string,
- *      platform: ?ZBPlatform
+ *     app: ZBApplication,
+ *     buildDir: string,
+ *     platformName: string,
+ *     platform: ?ZBPlatform
  * }} data
  */
 module.exports = function(callback, data) {
 	console.log('PostBuild for %s in %s', data.platformName, data.buildDir);
 
-	require('child_process').exec('ls -al ' + data.buildDir,
-		function(error, stdout, stderr) {
+	exec('ls -al ' + data.buildDir,
+		(error, stdout) => {
 			console.log('Result: ', stdout);
 			if (error !== null) {
 				console.log('exec error: ' + error);

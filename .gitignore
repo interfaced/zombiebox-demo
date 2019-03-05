@@ -3,4 +3,4 @@
 \.code-cache/*
 dist/*
 node_modules
-web/dev.js
+fake.webpack.config.js

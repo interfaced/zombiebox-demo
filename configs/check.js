@@ -1,9 +1,9 @@
 /**
- * @param {Object} config
+ * @param {Object} baseConfig
  * @return {Object}
  */
-module.exports = (config) => {
-	config = require('./../config')(config);
+module.exports = (baseConfig) => {
+	config = require('./../config')(baseConfig); // eslint-disable-line global-require
 
 	config.compilation = {
 		flags: {

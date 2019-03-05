@@ -1,10 +1,10 @@
 /**
  * @param {function()} callback
  * @param {{
- *      app: ZBApplication,
- *      buildDir: string,
- *      platformName: string,
- *      platform: ?ZBPlatform
+ *     app: ZBApplication,
+ *     buildDir: string,
+ *     platformName: string,
+ *     platform: ?ZBPlatform
  * }} data
  */
 module.exports = function(callback, data) {

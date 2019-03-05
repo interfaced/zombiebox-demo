@@ -1,0 +1,20 @@
+/* BaseListItem widget
+*******************************/
+
+.w-zbui-base-list-item {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+	.w-zbui-base-list-item__wrap {
+		width: 135px;
+		height: 115px;
+		border: 3px solid #8a8a8a;
+		border-radius: 5px;
+	}
+	.w-zbui-base-list-item__title {
+		font-size: 27px;
+		line-height: 1;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 45px;
+	}

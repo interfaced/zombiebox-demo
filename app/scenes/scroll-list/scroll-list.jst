@@ -1,0 +1,12 @@
+{{+ import BaseListItem from "demo/widgets/base-list-item/base-list-item"; }}
+{{+ import ScrollList from "ui/widgets/scroll-list/scroll-list"; }}
+
+{{* this.count number }}
+
+<div class="s-list-static__title" data-export-id="{{@title}}"></div>
+
+{{% ScrollList, {itemClass: BaseListItem}, scrollList }}
+
+<div class="s-list-static__amount">
+	Elements amount: <span class="s-list-static__amount-number" data-export-id="{{@count}}">{{- this.count }}</span>
+</div>

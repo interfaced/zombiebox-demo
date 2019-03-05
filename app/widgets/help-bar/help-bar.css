@@ -1,0 +1,8 @@
+.w-zbui-help-bar {}
+	.w-zbui-help-bar .w-zbui-help-bar-item {
+		vertical-align: middle;
+		display: inline-block;
+		float: none;
+		position: relative;
+		margin-left: 14px;
+	}

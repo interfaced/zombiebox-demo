@@ -1,0 +1,9 @@
+{{+ import {Keyboard} from "demo/widgets/keyboard/keyboard"; }}
+{{+ import DivInput from "ui/widgets/input/div-input"; }}
+
+<div class="s-custom-input__title">Custom input - URL</div>
+<div class="s-custom-input__input-wrapper" data-export-id="{{@inputWrap}}">
+	<div class="s-custom-input__input _not-changed" data-component="{{% DivInput, {}, input }}"></div>
+</div>
+
+{{% Keyboard, {}, keyboard }}

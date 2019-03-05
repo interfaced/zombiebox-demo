@@ -1,0 +1,12 @@
+.s-abstract-base {
+	width: 952px;
+	height: 680px;
+	background-color: #222;
+	padding-top: 40px;
+	padding-left: 328px;
+}
+	.s-abstract-base .w-zbui-help-bar {
+		position: absolute;
+		right: 70px;
+		bottom: 38px;
+	}

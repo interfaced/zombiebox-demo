@@ -1,0 +1,14 @@
+{{+ import NativeInput from "ui/widgets/input/native-input"; }}
+
+<div class="s-native-input__title">Native Input</div>
+
+<div class="s-native-input__input-wrapper" data-export-id="{{@inputWrap}}">
+	<input class="s-native-input__input" id="nativeInput" data-component="{{% NativeInput, {}, input }}">
+</div>
+
+<div class="s-native-input-warn" data-export-id="{{@warnMessage}}">
+	<div class="s-native-input-warn__title">Attention!</div>
+	<div class="s-native-input-warn__message">
+		Current platform doesn't provide virtual onscreen keyboard for applications.
+	</div>
+</div>

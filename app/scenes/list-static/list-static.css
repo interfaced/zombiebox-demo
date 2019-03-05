@@ -1,0 +1,32 @@
+/* ListStatic scene
+*******************************/
+
+.s-list-static {}
+	.s-list-static__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-list-static__slider-wrapper {
+		position: relative;
+	}
+	.s-list-static__amount {
+		font-size: 18px;
+		margin-top: 22px;
+		margin-left: 83px;
+	}
+	.s-list-static__amount-number {
+		font-size: 21px;
+	}
+	.s-list-static .w-zbui-base-list {
+		margin: 20px 84px 0 83px;
+	}
+	.s-list-static .w-zbui-base-list__wrap {
+		margin-left: -20px;
+	}
+	.s-list-static .w-zbui-base-list-item {
+		display: table-cell;
+	}
+	.s-list-static .w-help-bar-item._green {
+		margin-left: -25px;
+	}

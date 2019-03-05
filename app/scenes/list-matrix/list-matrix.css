@@ -1,0 +1,45 @@
+/* ListMatrix scene
+*******************************/
+
+.s-list-matrix {}
+	.s-list-matrix__title {
+		font-size: 27px;
+		font-weight: bold;
+		margin-left: 83px;
+	}
+	.s-list-matrix__slider-wrapper {
+		height: 564px;
+		position: relative;
+		margin-left: 63px;
+	}
+	.s-list-matrix .w-zbui-base-list {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+		.s-list-matrix .w-zbui-base-list .w-zbui-base-list__wrap {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		.s-list-matrix .w-zbui-base-list .w-zbui-base-list-item {
+			display: inline-block;
+		}
+	.s-list-matrix__amount {
+		font-size: 18px;
+		position: absolute;
+		bottom: 42px;
+		left: 411px;
+	}
+	.s-list-matrix__amount-number {
+		font-size: 21px;
+		margin-right: 25px;
+	}
+	.s-list-matrix .w-zbui-help-bar-item._green,
+	.s-list-matrix .w-zbui-help-bar-item._blue {
+		margin-left: -25px;
+	}

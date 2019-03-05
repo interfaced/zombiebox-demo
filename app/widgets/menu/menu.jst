@@ -1,0 +1,9 @@
+{{+ import ScrollBar from "ui/widgets/scroll-bar/scroll-bar"; }}
+
+<div class="w-menu">
+	<div class="w-menu__logo"></div >
+	<div class="w-menu__wrap" data-export-id="{{@buttons}}"></div>
+
+	{{% ScrollBar, {isVertical: true}, scrollBar }}
+</div>
+

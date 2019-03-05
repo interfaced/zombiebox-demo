@@ -1,0 +1,14 @@
+{{+ import BaseListItem from "demo/widgets/base-list-item/base-list-item"; }}
+{{+ import ArrowList from "ui/widgets/arrow-list/arrow-list"; }}
+
+{{* this.count number }}
+
+<div class="s-list-static__title" data-export-id="{{@title}}"></div>
+
+<div class="s-list-static__slider-wrapper">
+	{{% ArrowList, {options: {padding: 5, lineSize: 1}, itemClass: BaseListItem}, arrowList }}
+</div>
+
+<div class="s-list-static__amount">
+	Elements amount: <span class="s-list-static__amount-number" data-export-id="{{@count}}">{{- this.count }}</span>
+</div>

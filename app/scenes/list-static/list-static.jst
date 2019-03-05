@@ -1,0 +1,12 @@
+{{+ import BaseListItem from "demo/widgets/base-list-item/base-list-item"; }}
+{{+ import BaseList from "ui/widgets/base-list/base-list"; }}
+
+{{* this.count number }}
+
+<div class="s-list-static__title" data-export-id="{{@title}}"></div>
+
+{{% BaseList, {options: {padding: 5, lineSize: 1}, itemClass: BaseListItem}, baseList }}
+
+<div class="s-list-static__amount">
+	Elements amount: <span class="s-list-static__amount-number" data-export-id="{{@count}}">{{- this.count }}</span>
+</div>

@@ -1,0 +1,8 @@
+/* BaseList widget
+*******************************/
+
+.w-zbui-base-list._active {}
+	.w-zbui-base-list._active .w-zbui-base-list-item._active .w-zbui-base-list-item__wrap {
+		background-color: #fba015;
+		border-color: #fba015;
+	}

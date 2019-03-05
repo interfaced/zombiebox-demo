@@ -1,0 +1,18 @@
+{{+ import PlayerProgress from "demo/widgets/player-progress/player-progress"; }}
+{{+ import Button from "ui/widgets/button/button"; }}
+{{+ import PlayerPlayPause from "ui/widgets/player-play-pause/player-play-pause"; }}
+
+<div class="s-video-player__title">Videoplayer</div>
+
+<div class="s-video-player__frame"></div>
+<div class="s-video-player__overlay"></div>
+
+<div class="s-video-player-control" data-export-id="{{@playerControls}}">
+	<div class="s-video-player-control__wrap">
+		<div class="s-video-player-control__item _rew" data-component="{{% Button, {}, rew }}"></div>
+		<div class="s-video-player-control__item _pause" data-component="{{% PlayerPlayPause, {}, playPause }}"></div>
+		<div class="s-video-player-control__item _ff" data-component="{{% Button, {}, ff }}"></div>
+		<div class="s-video-player-control__item _full-screen" data-component="{{% Button, {}, fullscreen }}"></div>
+		{{% PlayerProgress, {}, playerProgress }}
+	</div>
+</div>
