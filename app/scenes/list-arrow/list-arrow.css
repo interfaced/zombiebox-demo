@@ -1,0 +1,32 @@
+/* ArrowList scene
+*******************************/
+
+.s-list-arrow-slider {}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow {
+		position: absolute;
+		top: 50%;
+		margin-top: -9px;
+		border: 11px solid transparent;
+	}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow._disabled {
+		display: block;
+	}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow._left {
+		left: 24px;
+		border-right: 18px solid #fff;
+	}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow._right {
+		right: 24px;
+		border-left: 18px solid #fff;
+	}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow._left._disabled {
+		border-right-color: #656565;
+	}
+	.s-list-arrow-slider .w-zbui-arrow-list__arrow._right._disabled {
+		border-left-color: #656565;
+	}
+
+.s-list-arrow {}
+	.s-list-arrow__slider-wrapper {
+		position: relative;
+	}

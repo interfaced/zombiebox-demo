@@ -1,6 +1,6 @@
 \.idea
 \.DS_Store
-\.code-cache/*
+\.generated/*
 dist/*
 node_modules
 fake.webpack.config.js

@@ -1,1 +1,3 @@
 fake.webpack.config.js
+dist/
+.generated/

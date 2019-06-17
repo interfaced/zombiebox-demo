@@ -1,7 +1,7 @@
+import AbstractCuteScene from 'cutejs/layers/abstract-scene';
 import app from 'generated/app';
 import {Value} from 'zb/geometry/direction';
 import {Out, render} from 'generated/cutejs/demo/scenes/abstract-base/abstract-base.jst';
-import AbstractCuteScene from 'zb/layers/abstract-cute-scene';
 import HelpBar from 'ui/widgets/help-bar/help-bar';
 import IHelpBarItem from 'ui/widgets/help-bar/i-help-bar-item';
 import MenuWidget from '../../widgets/menu/menu';
@@ -147,7 +147,7 @@ export const Menu = {
 		}]
 	},
 	baseList: {
-		title: 'Base-list',
+		title: 'Lists',
 		subItems: [{
 			title: 'Static',
 			scene: 'list-static'
@@ -157,15 +157,13 @@ export const Menu = {
 		}, {
 			title: 'Matrix',
 			scene: 'list-matrix'
+		}, {
+			title: 'Arrow-list',
+			scene: 'list-arrow'
+		}, {
+			title: 'Scroll-list',
+			scene: 'list-scroll'
 		}]
-	},
-	arrowList: {
-		title: 'Arrow-list',
-		scene: 'arrow-list'
-	},
-	scrollList: {
-		title: 'Scroll-list',
-		scene: 'scroll-list'
 	},
 	scrollText: {
 		title: 'Scroll-text',

@@ -1,17 +1,20 @@
-Zombiebox demo application
-=========
+# ZombieBox demo
 
-Installation
-------------
+[ZombieBox](https://github.com/interfaced/zombiebox) is cross-platform Smart TV development framework.
 
-```sh
-$ npm install
-```
+This is a demo application built with it that highlights some of its features.
 
-Usage
------
+# Installation
 
 ```sh
-$ npm start 
+npm install
 ```
+
+# Usage
+
+```sh
+npm start 
+```
+
+This will launch development http server on [localhost:1337](localhost:1337) with application runtime. 
 

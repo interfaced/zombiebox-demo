@@ -75,7 +75,7 @@
 			background-color: #010101;
 		}
 
-.s-video-player {
+.s-abstract-base.s-video-player {
 	background-color: transparent;
 }
 	.s-video-player__frame {
@@ -128,7 +128,7 @@
 
 .s-video-player._full-screen {}
 	.s-video-player._full-screen .w-menu,
-	.s-video-player._full-screen .w-help-bar,
+	.s-video-player._full-screen .w-zbui-help-bar,
 	.s-video-player._full-screen .s-video-player__title,
 	.s-video-player._full-screen .s-video-player__frame {
 		display: none;

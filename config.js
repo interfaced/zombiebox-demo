@@ -1,13 +1,17 @@
 const path = require('path');
 const {PARTIAL} = require('zombiebox-extension-dependency-injection').types.ImportType;
-const walkSync = require('walk-sync');
+const klaw = require('klaw-sync');
 
 
-const staticRoot = path.resolve(__dirname, 'static');
-const staticFiles = {};
-for (const file of walkSync(staticRoot, {directories: false})) {
-	staticFiles['/' + file] = path.join(staticRoot, file);
-}
+const listStatic = (dir) => {
+	const staticRoot = path.resolve(__dirname, 'static', dir);
+	const staticFiles = {};
+	for (const file of klaw(staticRoot, {nodir: true})) {
+		const absolutePath = file.path;
+		staticFiles[path.relative(staticRoot, absolutePath)] = absolutePath;
+	}
+	return staticFiles;
+};
 
 
 /**
@@ -17,37 +21,40 @@ module.exports = function() {
 	return {
 		project: {
 			name: 'demo',
-			main: path.resolve(__dirname, 'app/application.js'),
-			module: path.resolve(__dirname, 'app')
+			entry: path.resolve(__dirname, 'app/application.js'),
+			src: path.resolve(__dirname, 'app')
 		},
-		devModule: path.resolve(__dirname, 'app/dev.js'),
-		generatedDirectory: path.resolve(__dirname, '.code-cache'),
-		build: {
-			directory: path.resolve(__dirname, 'dist'),
-			include: staticFiles
+		generatedCode: path.resolve(__dirname, '.generated'),
+		include: [
+			{
+				name: 'Images',
+				static: listStatic('img')
+			}
+		],
+		devServer: {
+			backdoor: path.resolve(__dirname, 'app/dev.js')
 		},
-		styles: {
-			inlineResources: false
-		},
-		di: {
-			services: {
-				scenesNativeInput: {
-					_import: PARTIAL
+		extensions: {
+			di: {
+				services: {
+					scenesNativeInput: {
+						_import: PARTIAL
+					},
+					scenesVideoPlayer: {
+						_import: PARTIAL
+					}
 				},
-				scenesVideoPlayer: {
-					_import: PARTIAL
-				}
-			},
-			servicesAutodetect: [
-				{
-					group: 'scenes',
-					directory: path.resolve(__dirname, 'app/scenes')
-				},
-				{
-					group: 'service',
-					directory: path.resolve(__dirname, 'app/service')
-				}
-			]
+				servicesAutodetect: [
+					{
+						group: 'scenes',
+						directory: path.resolve(__dirname, 'app/scenes')
+					},
+					{
+						group: 'service',
+						directory: path.resolve(__dirname, 'app/service')
+					}
+				]
+			}
 		}
 	};
 };

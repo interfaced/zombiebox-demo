@@ -20,11 +20,10 @@ module.exports = {
 			settings: {
 				'import/resolver': {
 					alias: [
-						['generated', './.code-cache'],
+						['generated', './.generated'],
 						['demo', './app'],
 						['zb', resolveModulePath('zombiebox')],
-						['cutejs', resolveModulePath('cutejs')],
-						['i18n', resolveModulePath('zombiebox-extension-i18n')],
+						['cutejs', resolveModulePath('zombiebox-extension-cutejs')],
 						['ui', resolveModulePath('zombiebox-extension-ui')],
 						['about', resolveModulePath('zombiebox-extension-about')],
 						['pc', resolveModulePath('zombiebox-platform-pc')],

@@ -1,6 +1,6 @@
 import app from 'generated/app';
 import {AbstractBase} from '../scenes/abstract-base/abstract-base';
-import ArrowList from '../scenes/arrow-list/arrow-list';
+import ListArrow from '../scenes/list-arrow/list-arrow';
 import CustomInput from '../scenes/custom-input/custom-input';
 import CustomInputExtended from '../scenes/custom-input-extended/custom-input-extended';
 import ListDynamic from '../scenes/list-dynamic/list-dynamic';
@@ -10,7 +10,7 @@ import {NativeInput} from '../scenes/native-input/native-input';
 import Navigation from '../scenes/navigation/navigation';
 import NavigationCustom from '../scenes/navigation-custom/navigation-custom';
 import PopUps from '../scenes/pop-ups/pop-ups';
-import ScrollList from '../scenes/scroll-list/scroll-list';
+import ListScroll from '../scenes/list-scroll/list-scroll';
 import ScrollText from '../scenes/scroll-text/scroll-text';
 import {VideoPlayer} from '../scenes/video-player/video-player';
 
@@ -22,7 +22,7 @@ export default class Router {
 	 */
 	constructor() {
 		/**
-		 * @type {ArrowList} :inject
+		 * @type {ListArrow} :inject
 		 */
 		this.sceneArrowList;
 
@@ -72,7 +72,7 @@ export default class Router {
 		this.scenePopUps;
 
 		/**
-		 * @type {ScrollList} :inject
+		 * @type {ListScroll} :inject
 		 */
 		this.sceneScrollList;
 
@@ -110,17 +110,17 @@ export default class Router {
 	 */
 	getSceneByName(sceneName) {
 		return {
-			'arrow-list': this.sceneArrowList,
 			'custom-input': this.sceneCustomInput,
 			'custom-input-extended': this.sceneCustomInputExtended,
+			'list-arrow': this.sceneArrowList,
 			'list-dynamic': this.sceneListDynamic,
 			'list-matrix': this.sceneListMatrix,
 			'list-static': this.sceneListStatic,
+			'list-scroll': this.sceneScrollList,
 			'native-input': this.sceneNativeInput,
 			'navigation': this.sceneNavigation,
 			'navigation-custom': this.sceneNavigationCustom,
 			'pop-ups': this.scenePopUps,
-			'scroll-list': this.sceneScrollList,
 			'scroll-text': this.sceneScrollText,
 			'video-player': this.sceneVideoPlayer
 		}[sceneName];

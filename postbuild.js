@@ -3,10 +3,10 @@ const exec = require('child_process').exec;
 /**
  * @param {function()} callback
  * @param {{
- *     app: ZBApplication,
+ *     app: Application,
  *     buildDir: string,
  *     platformName: string,
- *     platform: ?ZBPlatform
+ *     platform: ?AbstractPlatform
  * }} data
  */
 module.exports = function(callback, data) {

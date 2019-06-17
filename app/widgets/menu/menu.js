@@ -1,5 +1,5 @@
+import AbstractCuteWidget from 'cutejs/widgets/abstract-widget';
 import {Out, render} from 'generated/cutejs/demo/widgets/menu/menu.jst';
-import AbstractCuteWidget from 'zb/widgets/abstract-cute-widget';
 import {MenuItem} from '../menu-item/menu-item';
 
 

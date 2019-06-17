@@ -15,7 +15,6 @@ export default class ListStatic extends AbstractBase {
 	 */
 	constructor() {
 		super();
-		/* eslint-disable interfaced/lines-between-props */
 
 		/**
 		 * @type {Out}
@@ -24,14 +23,10 @@ export default class ListStatic extends AbstractBase {
 		this._exported;
 
 		/**
-		 * TODO should be before super
 		 * @type {number}
 		 * @protected
 		 */
 		this._numberOfElements = 8;
-
-		this._addContainerClass('s-list-static');
-		text(this._exported.title, 'Horizontal static base-list with certain amount of elements');
 
 		/**
 		 * @type {DataSourceGenerator}
@@ -47,9 +42,18 @@ export default class ListStatic extends AbstractBase {
 		 * @protected
 		 */
 		this._itemsValue = this._numberOfElements;
-		this._configure();
 
-		/* eslint-enable interfaced/lines-between-props */
+		this._addContainerClass('s-list-static');
+		text(this._exported.title, 'Horizontal static base-list with certain amount of elements');
+		this._configure();
+	}
+
+	/**
+	 * @override
+	 */
+	afterDOMShow() {
+		super.afterDOMShow();
+		this._updateView();
 	}
 
 	/**
@@ -164,9 +168,7 @@ export default class ListStatic extends AbstractBase {
 	 * @protected
 	 */
 	_updateView() {
-		const exp = this._exported;
-
-		text(exp.count, String(this._numberOfElements));
-		exp.baseList.updateView();
+		text(this._exported.count, String(this._numberOfElements));
+		this._exported.baseList.updateView();
 	}
 }
