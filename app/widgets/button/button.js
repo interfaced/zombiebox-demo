@@ -7,15 +7,15 @@ import UIButton from 'ui/widgets/button/button';
  */
 export default class Button extends UIButton {
 	/**
-	 * @param {Input=} opt_params
+	 * @param {Input=} params
 	 */
-	constructor(opt_params) {
+	constructor(params) {
 		const exp = render();
 		const container = findFirstElementNode(exp.root);
 
 		let data;
-		if (opt_params && opt_params.data) {
-			data = opt_params.data;
+		if (params && params.data) {
+			data = params.data;
 		}
 
 		super(container, data);
@@ -26,12 +26,12 @@ export default class Button extends UIButton {
 		 */
 		this._exported = exp;
 
-		if (opt_params && opt_params.title) {
-			this.setTitle(opt_params.title);
+		if (params && params.title) {
+			this.setTitle(params.title);
 		}
 
-		if (opt_params && opt_params.modifier) {
-			this.setModifier(opt_params.modifier);
+		if (params && params.modifier) {
+			this.setModifier(params.modifier);
 		}
 	}
 
@@ -55,7 +55,7 @@ export default class Button extends UIButton {
  * @typedef {{
  *     title: (string|undefined),
  *     modifier: (string|undefined),
- *     data: (*|undefined),
+ *     data: (*|undefined)
  * }}
  */
 export let Input;

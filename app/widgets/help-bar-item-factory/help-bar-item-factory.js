@@ -5,17 +5,16 @@ import HelpBarItem from 'ui/widgets/help-bar/help-bar-item';
 
 /**
  * @param {string} label
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const red = (label, opt_callback) => {
+export const red = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_red',
 		label,
 		keys: [Keys.RED]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -24,17 +23,16 @@ export const red = (label, opt_callback) => {
 
 /**
  * @param {string} label
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const green = (label, opt_callback) => {
+export const green = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_green',
 		label,
 		keys: [Keys.GREEN]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -43,17 +41,16 @@ export const green = (label, opt_callback) => {
 
 /**
  * @param {string} label
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const yellow = (label, opt_callback) => {
+export const yellow = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_yellow',
 		label,
 		keys: [Keys.YELLOW]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -62,17 +59,16 @@ export const yellow = (label, opt_callback) => {
 
 /**
  * @param {string} label
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const blue = (label, opt_callback) => {
+export const blue = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_blue',
 		label,
 		keys: [Keys.BLUE]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -80,17 +76,16 @@ export const blue = (label, opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const play = (opt_callback) => {
+export const play = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_play',
 		label: 'Play',
 		keys: [Keys.PLAY]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -98,17 +93,16 @@ export const play = (opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const pause = (opt_callback) => {
+export const pause = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_pause',
 		label: 'Pause',
 		keys: [Keys.PAUSE]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -116,17 +110,16 @@ export const pause = (opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const rewind = (opt_callback) => {
+export const rewind = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_rew',
 		label: 'Backward',
 		keys: [Keys.REW]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -134,17 +127,16 @@ export const rewind = (opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const forward = (opt_callback) => {
+export const forward = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_ff',
 		label: 'Forward',
 		keys: [Keys.FWD]
 	});
 
-	const callback = typeof opt_callback === 'function' ? opt_callback : () => {/* empty */};
 	item.on(item.EVENT_CLICK, callback);
 
 	return item;
@@ -152,10 +144,10 @@ export const forward = (opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const back = (opt_callback) => {
+export const back = (callback) => {
 	const item = new HelpBarItem({
 		cssClass: '_back',
 		label: 'Back',
@@ -163,8 +155,8 @@ export const back = (opt_callback) => {
 	});
 
 	item.on(item.EVENT_CLICK, () => {
-		if (opt_callback) {
-			opt_callback();
+		if (callback) {
+			callback();
 		} else {
 			app.back();
 		}
@@ -175,10 +167,10 @@ export const back = (opt_callback) => {
 
 
 /**
- * @param {function()=} opt_callback
+ * @param {function()=} callback
  * @return {HelpBarItem}
  */
-export const exit = (opt_callback) => {
+export const exit = (callback) => {
 	const item = new HelpBarItem({
 		cssClass: '_exit',
 		label: 'Выход',
@@ -186,8 +178,8 @@ export const exit = (opt_callback) => {
 	});
 
 	item.on(item.EVENT_CLICK, () => {
-		if (opt_callback) {
-			opt_callback();
+		if (callback) {
+			callback();
 		} else {
 			app.exit();
 		}

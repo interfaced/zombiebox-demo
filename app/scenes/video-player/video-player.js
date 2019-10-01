@@ -288,7 +288,7 @@ export class VideoPlayer extends AbstractBase {
 	 * @private
 	 */
 	_createPlayer() {
-		this._player = app.device.createVideo();
+		this._player = app.device.createVideo(Rect.createByClientRect(app.getBody().getBoundingClientRect()));
 		const viewport = this._player.getViewport();
 		viewport.setArea(new Rect({
 			x0: displayArea.x,

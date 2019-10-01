@@ -21,7 +21,9 @@ export default class CustomInput extends AbstractBase {
 
 		const input = this._exported.input;
 
-		input.setTheme(this._exported.input.THEME_NONE);
+		// TODO: remove once traces of themes removed from ui
+		input.getContainer().classList.remove('_theme_default');
+
 		this._exported.keyboard.setInput(input);
 		input.setPlaceholder('Enter URL here');
 

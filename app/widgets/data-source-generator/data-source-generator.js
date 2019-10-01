@@ -38,11 +38,11 @@ export class DataSourceGenerator {
 	}
 
 	/**
-	 * @param {Options=} opt_options
+	 * @param {Options=} options
 	 * @return {DynamicList}
 	 */
-	getDynamicSource(opt_options) {
-		return new DynamicList(this._queryFunction.bind(this), opt_options);
+	getDynamicSource(options) {
+		return new DynamicList(this._queryFunction.bind(this), options);
 	}
 
 	/**
@@ -56,14 +56,13 @@ export class DataSourceGenerator {
 	/**
 	 * @param {number} from
 	 * @param {number} to
-	 * @param {number=} opt_row
+	 * @param {number=} row
 	 * @return {Array<{id: *}>}
 	 * @protected
 	 */
-	_generateData(from, to, opt_row) {
+	_generateData(from, to, row = 1) {
 		const data = [];
 		let elementInARow = 0;
-		let row = opt_row || 1;
 
 		for (let i = from; i <= to && i < 200; i++) {
 			let obj = {id: i};
@@ -85,7 +84,7 @@ export class DataSourceGenerator {
 	/**
 	 * @param {number} from
 	 * @param {number} to
-	 * @return {IThenable}
+	 * @return {Promise}
 	 * @protected
 	 */
 	_queryFunction(from, to) {

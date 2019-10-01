@@ -3,6 +3,7 @@ import {updateClassName, text} from 'zb/html';
 import {Status, StatusHandler} from 'ui/popups/abstract-base/abstract-base';
 import {Out, render} from 'generated/cutejs/demo/popups/simple/simple.jst';
 import Layer from 'zb/layers/layer';
+import AbstractApplication from 'zb/abstract-application';
 import AbstractBase from '../base/base';
 import Button from '../../widgets/button/button';
 
@@ -66,84 +67,84 @@ export class Simple extends AbstractBase {
 
 	/**
 	 * @param {Simple.Input} params
-	 * @param {Layer=} opt_layer
+	 * @param {(AbstractApplication|Layer)=} layer
 	 * @return {Simple}
 	 */
-	static open(params, opt_layer) {
+	static open(params, layer = app) {
 		const popup = new Simple(params);
-		(opt_layer || app).showChildLayerInstance(popup);
+		layer.showChildLayerInstance(popup);
 
 		return popup;
 	}
 
 	/**
 	 * @param {Simple.Input} params
-	 * @param {Layer=} opt_layer
-	 * @param {StatusHandler=} opt_statusHandler
-	 * @return {IThenable}
+	 * @param {Layer=} layer
+	 * @param {StatusHandler=} statusHandler
+	 * @return {Promise}
 	 */
-	static asPromise(params, opt_layer, opt_statusHandler) {
-		const popup = Simple.open(params, opt_layer);
+	static asPromise(params, layer, statusHandler) {
+		const popup = Simple.open(params, layer);
 
-		return popup.toPromise(opt_statusHandler);
+		return popup.toPromise(statusHandler);
 	}
 
 	/**
 	 * @param {string} title
-	 * @param {string=} opt_message
-	 * @param {string=} opt_title
-	 * @param {Layer=} opt_layer
-	 * @return {IThenable}
+	 * @param {string=} message
+	 * @param {string=} buttonTitle
+	 * @param {Layer=} layer
+	 * @return {Promise}
 	 */
-	static alert(title, opt_message, opt_title, opt_layer) {
+	static alert(title, message = '', buttonTitle = ButtonType.ALERT, layer) {
 		/** @type {Simple.Input} */
 		const params = {
 			title,
-			message: opt_message || '',
+			message,
 			buttons: [{
-				title: opt_title || ButtonType.ALERT,
+				title: buttonTitle,
 				status: Status.SUCCEEDED
 			}]
 		};
 
-		return Simple.asPromise(params, opt_layer);
+		return Simple.asPromise(params, layer);
 	}
 
 	/**
 	 * @param {string} title
-	 * @param {string=} opt_message
-	 * @param {string=} opt_yesTitle
-	 * @param {string=} opt_noTitle
-	 * @param {Layer=} opt_layer
-	 * @return {IThenable}
+	 * @param {string=} message
+	 * @param {string=} yesTitle
+	 * @param {string=} noTitle
+	 * @param {Layer=} layer
+	 * @return {Promise}
 	 */
-	static confirm(title, opt_message, opt_yesTitle, opt_noTitle, opt_layer) {
+	static confirm(title, message = '', yesTitle = ButtonType.CONFIRM_YES, noTitle = ButtonType.CONFIRM_NO, layer) {
 		/** @type {Simple.Input} */
 		const params = {
 			title,
-			message: opt_message || '',
+			message,
 			modifier: 'confirm',
 			buttons: [{
-				title: opt_yesTitle || ButtonType.CONFIRM_YES,
+				title: yesTitle,
 				status: Status.SUCCEEDED
 			}, {
-				title: opt_noTitle || ButtonType.CONFIRM_NO,
+				title: noTitle,
 				status: Status.CANCELLED
 			}]
 		};
 
-		return Simple.asPromise(params, opt_layer);
+		return Simple.asPromise(params, layer);
 	}
 
 	/**
 	 * @param {string} title
-	 * @param {string=} opt_message
-	 * @param {Array<Button>=} opt_buttons
-	 * @param {string=} opt_modifier
-	 * @param {Layer=} opt_layer
-	 * @return {IThenable}
+	 * @param {string=} message
+	 * @param {Array<Button>=} unusedButtons
+	 * @param {string=} modifier
+	 * @param {Layer=} layer
+	 * @return {Promise}
 	 */
-	static select(title, opt_message, opt_buttons, opt_modifier, opt_layer) {
+	static select(title, message = '', unusedButtons, modifier = 'select', layer) {
 		const commonTitle = 'Button';
 		const buttons = [];
 
@@ -157,12 +158,12 @@ export class Simple extends AbstractBase {
 		/** @type {Simple.Input} */
 		const params = {
 			title,
-			message: opt_message || '',
-			modifier: opt_modifier || 'select',
+			message,
+			modifier,
 			buttons
 		};
 
-		return Simple.asPromise(params, opt_layer);
+		return Simple.asPromise(params, layer);
 	}
 }
 

@@ -53,13 +53,13 @@ export class KeyboardExtended extends AbstractKeyboard {
 	/**
 	 * @override
 	 */
-	setLang(opt_lang) {
-		super.setLang(opt_lang);
+	setLang(lang) {
+		super.setLang(lang);
 
-		if (opt_lang) {
-			this._currentLang = opt_lang;
+		if (lang) {
+			this._currentLang = lang;
 			this._updateABCitems();
-			this._fireEvent(this.EVENT_LANG_SWITCH, opt_lang);
+			this._fireEvent(this.EVENT_LANG_SWITCH, lang);
 		}
 	}
 

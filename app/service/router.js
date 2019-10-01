@@ -93,7 +93,7 @@ export default class Router {
 	 *     id: number,
 	 *     subItem: ?number
 	 * }} activeSceneParams
-	 * @return {IThenable}
+	 * @return {Promise}
 	 */
 	show(sceneName, activeSceneParams) {
 		const scene = this.getSceneByName(sceneName);

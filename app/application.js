@@ -1,5 +1,6 @@
 import {hide, show, div} from 'zb/html';
 import {setLevel, Level} from 'zb/console/console';
+import {Resolution, ResolutionInfo} from 'zb/device/resolutions';
 import BaseApplication from 'generated/base-application';
 import About from 'about/about';
 import BaseServiceContainer from 'generated/dependency-injection/base-service-container';
@@ -81,7 +82,7 @@ export default class Application extends BaseApplication {
 	}
 
 	/**
-	 * @param {IThenable} job
+	 * @param {Promise} job
 	 */
 	addTrobberJob(job) {
 		if (this._throbber) {
@@ -102,6 +103,16 @@ export default class Application extends BaseApplication {
 	_onDeviceReady(eventName, device) {
 		super._onDeviceReady(eventName, device);
 		this._createThrobber();
+	}
+
+	/**
+	 * @override
+	 */
+	_appendScreenSizeClass() {
+		// No super necessary
+		const resolutionInfo = ResolutionInfo[Resolution.HD];
+		this._appendViewportSize(resolutionInfo);
+		this._body.classList.add('zb-hd');
 	}
 
 	/**

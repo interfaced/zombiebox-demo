@@ -1,6 +1,6 @@
 \.idea
 \.DS_Store
 \.generated/*
-dist/*
+dist/
 node_modules
 fake.webpack.config.js

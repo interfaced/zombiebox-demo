@@ -15,7 +15,9 @@ export default class Throbber extends UIThrobber {
 		};
 
 		super(div('w-throbber'), params);
-		this.setTheme(this.THEME_NONE);
+
+		// TODO: remove once traces of themes removed from ui
+		this._container.classList.remove('_theme_default');
 	}
 
 	/**

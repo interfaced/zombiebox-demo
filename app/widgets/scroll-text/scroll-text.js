@@ -22,13 +22,13 @@ export default class ScrollText extends UIScrollText {
 	/**
 	 * @override
 	 * @param {HTMLElement} slider
-	 * @param {ScrollBar=} opt_bar
-	 * @param {HTMLElement=} opt_shadow
+	 * @param {ScrollBar=} bar
+	 * @param {HTMLElement=} shadow
 	 */
-	setNodes(slider, opt_bar, opt_shadow) {
-		this._shadow = opt_shadow || null;
+	setNodes(slider, bar, shadow = null) {
+		this._shadow = shadow;
 
-		super.setNodes(slider, opt_bar);
+		super.setNodes(slider, bar);
 	}
 
 	/**
