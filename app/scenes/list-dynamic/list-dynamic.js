@@ -1,6 +1,6 @@
-import app from 'generated/app';
 import {Value} from 'zb/geometry/direction';
 import {text} from 'zb/html';
+import app from 'generated/app';
 import {back} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 import {DataType} from '../../widgets/data-source-generator/data-source-generator';
 import ListStatic from '../list-static/list-static';

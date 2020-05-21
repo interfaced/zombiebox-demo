@@ -1,6 +1,6 @@
-import app from 'generated/app';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import HelpBarItem from 'ui/widgets/help-bar/help-bar-item';
+import app from 'generated/app';
 
 
 /**
@@ -12,7 +12,7 @@ export const red = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_red',
 		label,
-		keys: [Keys.RED]
+		keys: [Key.RED]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -30,7 +30,7 @@ export const green = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_green',
 		label,
-		keys: [Keys.GREEN]
+		keys: [Key.GREEN]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -48,7 +48,7 @@ export const yellow = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_yellow',
 		label,
-		keys: [Keys.YELLOW]
+		keys: [Key.YELLOW]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -66,7 +66,7 @@ export const blue = (label, callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_blue',
 		label,
-		keys: [Keys.BLUE]
+		keys: [Key.BLUE]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -83,7 +83,7 @@ export const play = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_play',
 		label: 'Play',
-		keys: [Keys.PLAY]
+		keys: [Key.PLAY]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -100,7 +100,7 @@ export const pause = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_pause',
 		label: 'Pause',
-		keys: [Keys.PAUSE]
+		keys: [Key.PAUSE]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -117,7 +117,7 @@ export const rewind = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_rew',
 		label: 'Backward',
-		keys: [Keys.REW]
+		keys: [Key.REW]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -134,7 +134,7 @@ export const forward = (callback = () => {/* blank */}) => {
 	const item = new HelpBarItem({
 		cssClass: '_ff',
 		label: 'Forward',
-		keys: [Keys.FWD]
+		keys: [Key.FWD]
 	});
 
 	item.on(item.EVENT_CLICK, callback);
@@ -151,7 +151,7 @@ export const back = (callback) => {
 	const item = new HelpBarItem({
 		cssClass: '_back',
 		label: 'Back',
-		keys: [Keys.BACK]
+		keys: [Key.BACK]
 	});
 
 	item.on(item.EVENT_CLICK, () => {
@@ -174,7 +174,7 @@ export const exit = (callback) => {
 	const item = new HelpBarItem({
 		cssClass: '_exit',
 		label: 'Выход',
-		keys: [Keys.EXIT]
+		keys: [Key.EXIT]
 	});
 
 	item.on(item.EVENT_CLICK, () => {

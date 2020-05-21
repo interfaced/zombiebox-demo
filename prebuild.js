@@ -1,3 +1,5 @@
+const {AbstractPlatform, Application} = require('zombiebox');
+
 /**
  * @param {function()} callback
  * @param {{

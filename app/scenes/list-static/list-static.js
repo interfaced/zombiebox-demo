@@ -1,8 +1,8 @@
 import {Value} from 'zb/geometry/direction';
 import {updateClassName, text} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/scenes/list-static/list-static.jst';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import {Source} from 'ui/widgets/base-list/abstract-base-list-buffer';
+import {Out, render} from 'generated/cutejs/demo/scenes/list-static/list-static.jst';
 import {back, green, red} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 import {DataType, DataSourceGenerator} from '../../widgets/data-source-generator/data-source-generator';
 import {AbstractBase} from '../abstract-base/abstract-base';
@@ -65,7 +65,7 @@ export default class ListStatic extends AbstractBase {
 
 	/** @override */
 	_processKey(zbKey, e) {
-		const keys = Keys;
+		const keys = Key;
 		switch (zbKey) {
 			case keys.RED:
 				this._redCallback();

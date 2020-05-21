@@ -1,6 +1,6 @@
 import {updateClassName, text, findFirstElementNode} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/widgets/button/button.jst';
 import UIButton from 'ui/widgets/button/button';
+import {Out, render} from 'generated/cutejs/demo/widgets/button/button.jst';
 
 
 /**

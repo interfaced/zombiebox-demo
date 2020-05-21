@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
 	extends: 'interfaced',
 	overrides: [
@@ -11,7 +9,7 @@ module.exports = {
 			}
 		},
 		{
-			files: ['config.js', 'postbuild.js', 'prebuild.js', 'configs/*.js'],
+			files: ['config.js', 'postbuild.js', 'prebuild.js', 'configs/*.js', '.eslintrc.js'],
 			extends: 'interfaced/node'
 		}
 	]

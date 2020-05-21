@@ -1,8 +1,8 @@
 import {Value} from 'zb/geometry/direction';
 import {text, updateClassName} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/scenes/list-matrix/list-matrix.jst';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import BaseList from 'ui/widgets/base-list/base-list';
+import {Out, render} from 'generated/cutejs/demo/scenes/list-matrix/list-matrix.jst';
 import {red, green, yellow, blue, back} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 import {DataSourceGenerator, DataType} from '../../widgets/data-source-generator/data-source-generator';
 import {AbstractBase} from '../abstract-base/abstract-base';
@@ -82,16 +82,16 @@ export default class ListMatrix extends AbstractBase {
 	 */
 	_processKey(zbKey, e) {
 		switch (zbKey) {
-			case Keys.RED:
+			case Key.RED:
 				this._removeRow();
 				return true;
-			case Keys.GREEN:
+			case Key.GREEN:
 				this._addRow();
 				return true;
-			case Keys.YELLOW:
+			case Key.YELLOW:
 				this._removeColumn();
 				return true;
-			case Keys.BLUE:
+			case Key.BLUE:
 				this._addColumn();
 				return true;
 		}

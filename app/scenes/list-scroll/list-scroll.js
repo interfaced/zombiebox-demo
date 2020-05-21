@@ -1,7 +1,7 @@
 import {Value} from 'zb/geometry/direction';
 import {text} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/scenes/list-scroll/list-scroll.jst';
 import {Source} from 'ui/widgets/base-list/abstract-base-list-buffer';
+import {Out, render} from 'generated/cutejs/demo/scenes/list-scroll/list-scroll.jst';
 import ListStatic from '../list-static/list-static';
 import {DataSourceGenerator} from '../../widgets/data-source-generator/data-source-generator';
 

@@ -1,9 +1,9 @@
-import app from 'generated/app';
 import {debug} from 'zb/console/console';
-import {render} from 'generated/cutejs/demo/widgets/keyboard/keyboard.jst';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import AbstractKeyboard from 'ui/widgets/keyboard/abstract-keyboard';
 import {Lang, Action as ActionType} from 'ui/widgets/keyboard/keyboard-layout';
+import {render} from 'generated/cutejs/demo/widgets/keyboard/keyboard.jst';
+import app from 'generated/app';
 
 
 /**
@@ -21,11 +21,11 @@ export class Keyboard extends AbstractKeyboard {
 	}
 
 	/**
-	 * @param {Keys} zbKey
+	 * @param {Key} zbKey
 	 * @return {boolean}
 	 */
 	processShortcutKey(zbKey) {
-		const zbKeys = Keys;
+		const zbKeys = Key;
 		const zbCharKey = app.device.input.keyToPrintableChar(zbKey);
 
 		switch (zbKey) {

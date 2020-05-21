@@ -1,4 +1,5 @@
 const exec = require('child_process').exec;
+const {AbstractPlatform, Application} = require('zombiebox');
 
 /**
  * @param {function()} callback

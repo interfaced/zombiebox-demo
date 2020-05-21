@@ -1,6 +1,6 @@
 import {findFirstElementNode} from 'zb/html';
-import {render} from 'generated/cutejs/demo/widgets/base-list-item/base-list-item.jst';
 import UIBaseListItem from 'ui/widgets/base-list/base-list-item';
+import {render} from 'generated/cutejs/demo/widgets/base-list-item/base-list-item.jst';
 
 
 /**

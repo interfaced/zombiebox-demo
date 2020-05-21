@@ -1,6 +1,6 @@
 import {empty} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/popups/base/base.jst';
 import UIAbstractBase from 'ui/popups/abstract-base/abstract-base';
+import {Out, render} from 'generated/cutejs/demo/popups/base/base.jst';
 
 
 /**

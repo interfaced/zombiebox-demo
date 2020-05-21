@@ -1,7 +1,7 @@
 import {Value} from 'zb/geometry/direction';
 import {text} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/scenes/navigation/navigation.jst';
 import IWidget from 'zb/widgets/interfaces/i-widget';
+import {Out, render} from 'generated/cutejs/demo/scenes/navigation/navigation.jst';
 import Navigation from '../navigation/navigation';
 
 

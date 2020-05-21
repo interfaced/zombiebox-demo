@@ -1,7 +1,7 @@
-import app from 'generated/app';
 import {text, updateClassName, findFirstElementNode} from 'zb/html';
-import {Out, render} from 'generated/cutejs/demo/widgets/menu-item/menu-item.jst';
 import Button from 'ui/widgets/button/button';
+import app from 'generated/app';
+import {Out, render} from 'generated/cutejs/demo/widgets/menu-item/menu-item.jst';
 
 
 /**

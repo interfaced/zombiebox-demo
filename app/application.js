@@ -1,8 +1,8 @@
 import {hide, show, div} from 'zb/html';
 import {setLevel, Level} from 'zb/console/console';
 import {Resolution, ResolutionInfo} from 'zb/device/resolutions';
-import BaseApplication from 'generated/base-application';
 import About from 'about/about';
+import BaseApplication from 'generated/base-application';
 import BaseServiceContainer from 'generated/dependency-injection/base-service-container';
 import Throbber from './widgets/throbber/throbber';
 

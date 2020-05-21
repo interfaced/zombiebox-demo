@@ -1,5 +1,5 @@
+import Key from 'zb/device/input/key';
 import {Out, render} from 'generated/cutejs/demo/scenes/custom-input-extended/custom-input-extended.jst';
-import Keys from 'zb/device/input/keys';
 import {back, blue, yellow, green, red} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 import {Lang} from '../../widgets/keyboard-extended/keyboard-extended';
 import CustomInput from '../custom-input/custom-input';
@@ -25,7 +25,7 @@ export default class CustomInputExtended extends CustomInput {
 
 		const keyboard = this._exported.keyboard;
 		keyboard.on(keyboard.EVENT_LANG_SWITCH, (event, lang) => {
-			const item = this._helpBar.getItem(Keys.GREEN);
+			const item = this._helpBar.getItem(Key.GREEN);
 			const label = lang === Lang.RU ? 'Eng' : 'Ru';
 			item.setLabel(label);
 		});
@@ -66,10 +66,10 @@ export default class CustomInputExtended extends CustomInput {
 		const keyboard = this._exported.keyboard;
 
 		return [
-			red('Enter', keyboard.processShortcutKey.bind(keyboard, Keys.RED)),
-			green('Eng', keyboard.processShortcutKey.bind(keyboard, Keys.GREEN)),
-			yellow('Space', keyboard.processShortcutKey.bind(keyboard, Keys.YELLOW)),
-			blue('Backspace', keyboard.processShortcutKey.bind(keyboard, Keys.BLUE)),
+			red('Enter', keyboard.processShortcutKey.bind(keyboard, Key.RED)),
+			green('Eng', keyboard.processShortcutKey.bind(keyboard, Key.GREEN)),
+			yellow('Space', keyboard.processShortcutKey.bind(keyboard, Key.YELLOW)),
+			blue('Backspace', keyboard.processShortcutKey.bind(keyboard, Key.BLUE)),
 			back()
 		];
 	}

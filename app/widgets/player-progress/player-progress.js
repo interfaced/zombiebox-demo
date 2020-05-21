@@ -1,5 +1,5 @@
-import {Out, render} from 'generated/cutejs/demo/widgets/player-progress/player-progress.jst';
 import UIPlayerProgress from 'ui/widgets/player-progress/player-progress';
+import {Out, render} from 'generated/cutejs/demo/widgets/player-progress/player-progress.jst';
 
 
 /**

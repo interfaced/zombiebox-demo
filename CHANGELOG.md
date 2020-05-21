@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.0.2 (27.05.2020)
+
+* Support ZombieBox 2.7
+
 # 2.0.1 (01.10.2019)
 
 * ZombieBox 2.2 version

@@ -1,12 +1,12 @@
-import app from 'generated/app';
-import {Out, render} from 'generated/cutejs/demo/widgets/keyboard-extended/keyboard-extended.jst';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import AbstractKeyboard from 'ui/widgets/keyboard/abstract-keyboard';
 import {
 	Type as KeyboardLayoutType,
 	Lang as KeyboardLayoutLang,
 	Action as KeyboardLayoutAction
 } from 'ui/widgets/keyboard/keyboard-layout';
+import {Out, render} from 'generated/cutejs/demo/widgets/keyboard-extended/keyboard-extended.jst';
+import app from 'generated/app';
 
 
 /**
@@ -64,11 +64,11 @@ export class KeyboardExtended extends AbstractKeyboard {
 	}
 
 	/**
-	 * @param {Keys} zbKey
+	 * @param {Key} zbKey
 	 * @return {boolean}
 	 */
 	processShortcutKey(zbKey) {
-		const zbKeys = Keys;
+		const zbKeys = Key;
 		const zbCharKey = app.device.input.keyToPrintableChar(zbKey);
 
 		switch (zbKey) {

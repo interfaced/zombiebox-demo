@@ -1,11 +1,13 @@
-import app from 'generated/app';
 import {updateClassName, text} from 'zb/html';
 import {Status, StatusHandler} from 'ui/popups/abstract-base/abstract-base';
-import {Out, render} from 'generated/cutejs/demo/popups/simple/simple.jst';
 import Layer from 'zb/layers/layer';
 import AbstractApplication from 'zb/abstract-application';
+import {Out, render} from 'generated/cutejs/demo/popups/simple/simple.jst';
+import app from 'generated/app';
 import AbstractBase from '../base/base';
 import Button from '../../widgets/button/button';
+
+/* eslint-disable default-param-last */
 
 
 /**

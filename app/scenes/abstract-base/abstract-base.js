@@ -1,9 +1,9 @@
 import AbstractCuteScene from 'cutejs/layers/abstract-scene';
-import app from 'generated/app';
 import {Value} from 'zb/geometry/direction';
-import {Out, render} from 'generated/cutejs/demo/scenes/abstract-base/abstract-base.jst';
 import HelpBar from 'ui/widgets/help-bar/help-bar';
 import IHelpBarItem from 'ui/widgets/help-bar/i-help-bar-item';
+import {Out, render} from 'generated/cutejs/demo/scenes/abstract-base/abstract-base.jst';
+import app from 'generated/app';
 import MenuWidget from '../../widgets/menu/menu';
 import {back} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 

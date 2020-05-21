@@ -1,12 +1,12 @@
-import app from 'generated/app';
 import {Value} from 'zb/geometry/direction';
 import {show, updateClassName, hide} from 'zb/html';
 import IVideo, {State} from 'zb/device/interfaces/i-video';
 import {error} from 'zb/console/console';
-import {Out, render} from 'generated/cutejs/demo/scenes/video-player/video-player.jst';
 import Timeout from 'zb/timeout';
-import Keys from 'zb/device/input/keys';
+import Key from 'zb/device/input/key';
 import Rect from 'zb/geometry/rect';
+import {Out, render} from 'generated/cutejs/demo/scenes/video-player/video-player.jst';
+import app from 'generated/app';
 import {AbstractBase} from '../abstract-base/abstract-base';
 import {back, pause, play} from '../../widgets/help-bar-item-factory/help-bar-item-factory';
 
@@ -113,7 +113,7 @@ export class VideoPlayer extends AbstractBase {
 	 * @override
 	 */
 	processKey(zbKey, e) {
-		const keys = Keys;
+		const keys = Key;
 
 		this._showOsd();
 
@@ -350,8 +350,8 @@ export class VideoPlayer extends AbstractBase {
 	 * @private
 	 */
 	_toggleHelpBarButtonsState(status) {
-		const pause = this._helpBar.getItem(Keys.PAUSE);
-		const play = this._helpBar.getItem(Keys.PLAY);
+		const pause = this._helpBar.getItem(Key.PAUSE);
+		const play = this._helpBar.getItem(Key.PLAY);
 
 		if (status) {
 			play.hide();
