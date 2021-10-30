@@ -56,7 +56,7 @@ export class MenuItem extends Button {
 					param = {id: this._data.id, subItem: null};
 				}
 
-				app.sc.serviceRouter.show(this._data.scene, param);
+				app.router.show(this._data.scene, param);
 			});
 		}
 

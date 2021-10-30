@@ -3,8 +3,9 @@
   "description": "ZombieBox demo application",
   "version": "2.0.2",
   "license": "MIT",
-  "author": "Interfaced (http://interfaced.tv)",
+  "author": "Interfaced (https://interfaced.tv)",
   "homepage": "https://github.com/interfaced/zombiebox-demo",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:interfaced/zombiebox-demo.git"
@@ -39,20 +40,19 @@
   "dependencies": {
     "eslint-import-resolver-zombiebox": "^1.0.1",
     "klaw-sync": "^6.0.0",
-    "zombiebox": "^2.7.2",
-    "zombiebox-extension-about": "^2.1.1",
+    "zombiebox": "^2.7.10",
+    "zombiebox-extension-about": "^2.1.2",
     "zombiebox-extension-cutejs": "^1.2.1",
-    "zombiebox-extension-dependency-injection": "^2.0.0",
     "zombiebox-extension-ui": "^2.1.2",
-    "zombiebox-platform-pc": "^2.3.3",
-    "zombiebox-platform-tizen": "^2.2.3"
+    "zombiebox-platform-pc": "^2.3.6",
+    "zombiebox-platform-tizen": "^2.2.4"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-interfaced": "^2.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-interfaced": "^2.0.0",
-    "eslint-plugin-jsdoc": "^25.4.2",
+    "eslint": "^7.32.0",
+    "eslint-config-interfaced": "^2.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-interfaced": "^2.0.1",
+    "eslint-plugin-jsdoc": "^36.1.0",
     "eslint-plugin-node": "^11.1.0"
   }
 }

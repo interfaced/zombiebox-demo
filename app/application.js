@@ -3,7 +3,7 @@ import {setLevel, Level} from 'zb/console/console';
 import {Resolution, ResolutionInfo} from 'zb/device/resolutions';
 import About from 'about/about';
 import BaseApplication from 'generated/base-application';
-import BaseServiceContainer from 'generated/dependency-injection/base-service-container';
+import Router from './service/router';
 import Throbber from './widgets/throbber/throbber';
 
 
@@ -17,9 +17,9 @@ export default class Application extends BaseApplication {
 		super();
 
 		/**
-		 * @type {BaseServiceContainer}
+		 * @type {Router}
 		 */
-		this.sc;
+		this.router;
 
 		/**
 		 * @type {?Throbber}
@@ -52,8 +52,8 @@ export default class Application extends BaseApplication {
 	onReady() {
 		super.onReady();
 
-		this.sc = new BaseServiceContainer(this);
-		this.sc.bootstrap();
+		this.router = new Router();
+		this.router.bootstrap();
 
 		if (this.isDevicePc()) {
 			this._body.appendChild(div('zb-body__pc-help'));
@@ -73,8 +73,8 @@ export default class Application extends BaseApplication {
 	 */
 	home() {
 		return this.getSceneOpener()
-			.open(this.sc.scenesVideoPlayer, () => {
-				this.sc.scenesVideoPlayer.setActiveSceneId({
+			.open(this.router.sceneVideoPlayer, () => {
+				this.router.sceneVideoPlayer.setActiveSceneId({
 					id: 0,
 					subItem: null
 				});

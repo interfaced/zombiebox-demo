@@ -1,10 +1,10 @@
-const path = require('path');
-const {PARTIAL} = require('zombiebox-extension-dependency-injection').types.ImportType;
-const klaw = require('klaw-sync');
+import path from 'path';
+import klaw from 'klaw-sync';
+import {utils} from 'zombiebox';
 
 
 const listStatic = (dir) => {
-	const staticRoot = path.resolve(__dirname, 'static', dir);
+	const staticRoot = utils.resolve(import.meta.url, path.join('static', dir));
 	const staticFiles = {};
 	for (const file of klaw(staticRoot, {nodir: true})) {
 		const absolutePath = file.path;
@@ -17,14 +17,14 @@ const listStatic = (dir) => {
 /**
  * @return {Object}
  */
-module.exports = function() {
+export default () => {
 	return {
 		project: {
 			name: 'demo',
-			entry: path.resolve(__dirname, 'app/application.js'),
-			src: path.resolve(__dirname, 'app')
+			entry: utils.resolve(import.meta.url, 'app/application.js'),
+			src: utils.resolve(import.meta.url, 'app')
 		},
-		generatedCode: path.resolve(__dirname, '.generated'),
+		generatedCode: utils.resolve(import.meta.url, '.generated'),
 		include: [
 			{
 				name: 'Images',
@@ -32,29 +32,7 @@ module.exports = function() {
 			}
 		],
 		devServer: {
-			backdoor: path.resolve(__dirname, 'app/dev.js')
-		},
-		extensions: {
-			di: {
-				services: {
-					scenesNativeInput: {
-						_import: PARTIAL
-					},
-					scenesVideoPlayer: {
-						_import: PARTIAL
-					}
-				},
-				servicesAutodetect: [
-					{
-						group: 'scenes',
-						directory: path.resolve(__dirname, 'app/scenes')
-					},
-					{
-						group: 'service',
-						directory: path.resolve(__dirname, 'app/service')
-					}
-				]
-			}
+			backdoor: utils.resolve(import.meta.url, 'app/dev.js')
 		}
 	};
 };

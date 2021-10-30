@@ -1,4 +1,4 @@
-const {AbstractPlatform, Application} = require('zombiebox');
+import {AbstractPlatform, Application} from 'zombiebox';
 
 /**
  * @param {function()} callback
@@ -9,7 +9,7 @@ const {AbstractPlatform, Application} = require('zombiebox');
  *     platform: ?AbstractPlatform
  * }} data
  */
-module.exports = function(callback, data) {
+export default (callback, data) => {
 	console.log('PreBuild for %s in %s', data.platformName, data.buildDir);
 	callback();
 };

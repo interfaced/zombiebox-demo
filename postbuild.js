@@ -1,5 +1,5 @@
-const exec = require('child_process').exec;
-const {AbstractPlatform, Application} = require('zombiebox');
+import {exec} from 'child_process';
+import {AbstractPlatform, Application} from 'zombiebox';
 
 /**
  * @param {function()} callback
@@ -10,7 +10,7 @@ const {AbstractPlatform, Application} = require('zombiebox');
  *     platform: ?AbstractPlatform
  * }} data
  */
-module.exports = function(callback, data) {
+export default (callback, data) => {
 	console.log('PostBuild for %s in %s', data.platformName, data.buildDir);
 
 	exec('ls -al ' + data.buildDir,

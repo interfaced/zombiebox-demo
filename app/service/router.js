@@ -22,69 +22,77 @@ export default class Router {
 	 */
 	constructor() {
 		/**
-		 * @type {ListArrow} :inject
+		 * @type {ListArrow}
 		 */
-		this.sceneArrowList;
+		this.sceneArrowList = new ListArrow();
 
 		/**
-		 * @type {CustomInput} :inject
+		 * @type {CustomInput}
 		 */
-		this.sceneCustomInput;
+		this.sceneCustomInput = new CustomInput();
 
 		/**
-		 * @type {CustomInputExtended} :inject
+		 * @type {CustomInputExtended}
 		 */
-		this.sceneCustomInputExtended;
+		this.sceneCustomInputExtended = new CustomInputExtended();
 
 		/**
 		 * @type {ListDynamic} :inject
 		 */
-		this.sceneListDynamic;
+		this.sceneListDynamic = new ListDynamic();
 
 		/**
 		 * @type {ListMatrix} :inject
 		 */
-		this.sceneListMatrix;
+		this.sceneListMatrix = new ListMatrix();
 
 		/**
 		 * @type {ListStatic} :inject
 		 */
-		this.sceneListStatic;
+		this.sceneListStatic = new ListStatic();
 
 		/**
 		 * @type {NativeInput} :inject
 		 */
-		this.sceneNativeInput;
+		this.sceneNativeInput = new NativeInput();
 
 		/**
 		 * @type {Navigation} :inject
 		 */
-		this.sceneNavigation;
+		this.sceneNavigation = new Navigation();
 
 		/**
 		 * @type {NavigationCustom} :inject
 		 */
-		this.sceneNavigationCustom;
+		this.sceneNavigationCustom = new NavigationCustom();
 
 		/**
 		 * @type {PopUps} :inject
 		 */
-		this.scenePopUps;
+		this.scenePopUps = new PopUps();
 
 		/**
 		 * @type {ListScroll} :inject
 		 */
-		this.sceneScrollList;
+		this.sceneScrollList = new ListScroll();
 
 		/**
 		 * @type {ScrollText} :inject
 		 */
-		this.sceneScrollText;
+		this.sceneScrollText = new ScrollText();
 
 		/**
 		 * @type {VideoPlayer} :inject
 		 */
-		this.sceneVideoPlayer;
+		this.sceneVideoPlayer = new VideoPlayer();
+	}
+
+	/**
+	 */
+	bootstrap() {
+		for (const [name, scene] of Object.entries(this.getScenes())) {
+			app.addScene(scene, name);
+		}
 	}
 
 	/**
@@ -97,7 +105,6 @@ export default class Router {
 	 */
 	show(sceneName, activeSceneParams) {
 		const scene = this.getSceneByName(sceneName);
-
 		return app.getSceneOpener()
 			.open(scene, () => {
 				scene.setActiveSceneId(activeSceneParams);
@@ -105,10 +112,9 @@ export default class Router {
 	}
 
 	/**
-	 * @param {string} sceneName
-	 * @return {AbstractBase}
+	 * @return {!Object<string, AbstractBase>}
 	 */
-	getSceneByName(sceneName) {
+	getScenes() {
 		return {
 			'custom-input': this.sceneCustomInput,
 			'custom-input-extended': this.sceneCustomInputExtended,
@@ -123,6 +129,14 @@ export default class Router {
 			'pop-ups': this.scenePopUps,
 			'scroll-text': this.sceneScrollText,
 			'video-player': this.sceneVideoPlayer
-		}[sceneName];
+		};
+	}
+
+	/**
+	 * @param {string} sceneName
+	 * @return {AbstractBase}
+	 */
+	getSceneByName(sceneName) {
+		return this.getScenes()[sceneName];
 	}
 }
